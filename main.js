@@ -14,22 +14,18 @@ function createWindow() {
       nodeIntegration: true,
     },
   });
-
   // and load the index.html of the app.
   // win.loadFile('index.html');
-  win.loadURL(config.urlYoutube);
+  win.loadURL(config.url);
   // Open the DevTools.
   // win.webContents.openDevTools();
 }
-
-function toggleDevTools() {
+function toggleDev() {
   win.webContents.toggleDevTools();
 }
-
 function createShortcuts() {
-  globalShortcut.register('CmdOrCtrl+J', toggleDevTools);
+  globalShortcut.register('CmdOrCtrl+F12', toggleDev);
 }
-
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Algumas APIs podem ser usadas somente depois que este evento ocorre.
